@@ -1,0 +1,81 @@
+1.
+name=input("Enter your name : " )
+print("hello ",name)
+
+output:
+Enter your name : rama
+hello  rama
+
+2.
+Cel=input(" Enter temp in Celsius : ")
+cel=int(Cel)
+fah= (cel*9)/5 +32
+print(fah)
+
+output:
+Enter temp in Celsius : 35
+95.0
+
+3.
+Hrs=input(" Enter  no of hours : ")
+hrs=int(Hrs)
+Rate=input("Enter rate : ")
+rate=int(Rate)
+if(hrs<=40):
+    sm=hrs*rate
+    print(sm)
+else:
+    th=(hrs-40)*rate*1.5
+    tl=40*rate
+    sm=th+tl
+    print(sm)
+
+output:
+ Enter  no of hours : 45
+Enter rate : 10
+475.0
+
+4.
+while True:
+    try:
+        Hrs=input(" Enter  no of hours : ")
+        hrs=int(Hrs)
+        break
+    except:
+        print("enter numeral input for hrs")
+        continue
+
+while True:
+    try:
+        Rate=input("Enter rate : ")
+        rate=int(Rate)
+        break
+    except:
+        print("enter numeral input for rate")
+        continue
+    
+if(hrs<=40):
+    sm=hrs*rate
+    print(sm)
+else:
+    th=(hrs-40)*rate*1.5
+    tl=40*rate
+    sm=th+tl
+    print(sm)
+
+output:
+ Enter  no of hours : forty
+enter numeral input for hrs
+ Enter  no of hours : 40
+Enter rate : ten
+enter numeral input for rate
+Enter rate : 10
+400
+
+5.
+hello= [4,3,7,2,8,1]
+x=min(hello)
+print(x)
+
+output:
+1
