@@ -1,0 +1,69 @@
+1.
+num=1
+sm=0
+count=0
+while(num!=0):
+    nu=input("enter number : " )
+    while True:
+        try:
+            if(nu=='done'):
+                num=0
+            nm=int(nu)
+            count=count+1
+            sm=sm+nm
+            break
+        except:
+            if(nu=='done'):
+                break
+            else:
+                print("enter numeral input for num")
+                nu=input("enter number : " )
+            continue
+
+print(sm)
+print(count)
+print(sm/count)
+
+output:
+enter number : 4
+enter number : 6
+enter number : 3
+enter number : 2
+enter number : ii
+enter numeral input for num
+enter number : done
+15
+4
+3.75
+
+2.
+Hrs=input(" Enter  no of hours : ")
+hrs=int(Hrs)
+Rate=input("Enter rate : ")
+rate=int(Rate)
+def computepay(hrs , rate):
+    if(hrs<=40):
+        sm=hrs*rate
+        print(sm)
+    else:
+        th=(hrs-40)*rate*1.5
+        tl=40*rate
+        sm=th+tl
+        print(sm)
+
+output:
+Enter  no of hours : 40
+Enter rate : 10
+>>> computepay(40,10)
+400
+>>> computepay(10,40)
+400
+
+3.
+str = 'X-DSPAM-Confidence: 0.8475'
+x=str.find(':')
+y=float(str[x+1:])
+print(y)
+
+output:
+0.8475
