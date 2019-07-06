@@ -1,0 +1,39 @@
+1.
+num=1
+sm=0
+count=0
+a=[]
+while(num!=0):
+    nu=input("enter number : " )
+    while True:
+        try:
+            if(nu=='done'):
+                num=0
+            nm=int(nu)
+            a.append(nm)
+            break
+        except:
+            if(nu=='done'):
+                break
+            else:
+                print("enter numeral input for num")
+                nu=input("enter number : " )
+            continue
+
+print("Maximum : ",max(a))
+print("Minimum : ",min(a))
+
+output:
+enter number : 3
+enter number : 6
+enter number : 2
+enter number : 6
+enter number : 1
+enter number : 7
+enter number : 4
+enter number : 9
+enter number : ii
+enter numeral input for num
+enter number : done
+Maximum :  9
+Minimum :  1
