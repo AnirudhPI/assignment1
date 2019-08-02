@@ -1,0 +1,25 @@
+from scipy.io import arff
+import pandas as pd
+
+data = arff.loadarff('PhishingData.arff')
+df = pd.DataFrame(data[0])
+
+print(df.tail())
+
+features=['SFH', 'popUpWidnow' ,'SSLfinal_State', 'Request_URL', 'URL_of_Anchor', 'web_traffic',
+          'URL_Length', 'age_of_domain', 'having_IP_Address'] 
+X=df[features]
+y=df['Result']
+
+from sklearn.model_selection import train_test_split
+X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.30,random_state=0)
+print(X_train[:10])
+
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import LabelEncoder
+
+print(X_train[X_train.isnull().any(axis=1)])
+# instantiate the model (using the default parameters)
+logisticRegr = LogisticRegression()
+logisticRegr.fit(X_train,y_train)   ##Error encountered
